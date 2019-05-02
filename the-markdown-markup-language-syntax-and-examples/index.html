@@ -1,0 +1,118 @@
+<!doctype html> <html lang="en"> <head> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <link rel="canonical" href="https://sarathlal.com/the-markdown-markup-language-syntax-and-examples/"> <title>The Markdown markup language, syntax and examples - Sarathlal N</title> <meta name="description" content="The Markdown is a markup language like HTML, but easy-to-read, easy-to-write plain text format and can be considerable as a minimal alternative to HTML. But..."> <link rel="icon" href="https://sarathlal.com/favicon.ico" sizes="32x32" /> <link rel="icon" href="https://sarathlal.com/siteicon.png" sizes="152x152" /> <link rel="apple-touch-icon-precomposed" href="https://sarathlal.com/siteicon.png" /> <meta name="msapplication-TileImage" content="https://sarathlal.com/siteicon.png" /> <link href="https://fonts.googleapis.com/css?family=Inconsolata|Muli:400,800" rel="stylesheet"> <style> /* Normalize start */ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none} /* Normalize end */ /* Custom start */ h1{font-size:2.5rem}h2{font-size:2rem}h3{font-size:1.375rem}h4{font-size:1.125rem}h5{font-size:1rem}h6{font-size:.875rem}p{font-size:1.25rem;line-height:1.8} body{font-family: 'Muli', sans-serif; font-weight:400; color: #3a3a3a;transition:all 0.3s ease;} .container {max-width: 42rem;margin: 0 auto;font-size: 1.25rem; padding:0 1rem;} h1, h2, h3, h4, h5, h6 {font-weight:800; line-height:1.4} pre {font-family: 'Inconsolata', monospace;font-size: 1.25rem;} code, kbd, samp {font-family: 'Inconsolata', monospace;font-size: 1.25rem;} p code, li code, table code {background-color: #f5f5f5;padding: 0.15rem 0.35rem;border: 1px solid #e2e2e2;border-radius: 2px;} img {max-width: 100%;} .clearfix:after {content: "";display: table;clear: both;} header{margin: 3rem 0 4rem; } header a {text-decoration:none; color: #3a3a3a;} header a:hover {border-bottom: 1px solid #3a3a3a;} header h2 a:hover{border-bottom:none} header h2 {font-size: 1.5rem;letter-spacing: 0.02em;} header nav {text-align:left;} header nav ul {list-style-type: none;margin: 0;padding: 0;overflow: hidden;} header nav ul li {float: left;line-height: inherit;} header nav ul li a {margin: 0 0.75rem;} header nav li::after { content: "/";color: #a0a0a0;} header nav li:last-child::after {content: "";} header nav li:last-child a {margin-right:0;} header nav li:first-child a {margin-left:0;} a{color:#23527c; text-decoration:none} a:hover{border-bottom: 1px solid #23527c;} li{line-height:1.8} .highlight {margin-bottom: 1rem;padding: 1rem 1.25rem;border-radius: .15rem;background-color: #f5f5f5;} pre {display: block;margin: 0 0 1rem;font-size: .875rem;line-height: 1.4;overflow: auto;} footer{margin: 0 0 4rem;} .cta-section {margin: 3rem 0;padding: 1rem 0;border-top: 4px dashed #ff7a7a;border-bottom: 4px dashed #ff7a7a;} .cta-section a.btn{border: 1px solid #ababab;padding: 0.5rem 1.5rem;border-radius: 0.5rem;background-color: #ffffff; transition:all 0.3s ease;} #form-container{display:none;} #form-container.show{display:block;} #contact-form {top-margin:2rem} #contact-form input[type=text], #contact-form input[type=email], #contact-form select, #contact-form textarea, #contact-form radio {width: 100%;padding: 0.7rem;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;margin-top: 0.3rem;resize: vertical;} #contact-form label.full-width{width:100%;display:inline-block} #contact-form input[type=submit] {background-color: #4CAF50;color: white;padding: 0.5rem 1.5rem;border: none;border-radius: 4px;cursor: pointer;} #contact-form input[type=submit]:hover {background-color: #45a049;} #contact-form p.important {text-indent: 100%;white-space: nowrap;overflow: hidden;margin: 0;padding: 0;height: 0;} /* Custom end */ </style> </head> <body itemscope itemtype="http://schema.org/WebPage"> <div class="container"> <!--[if lte IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]--> <header class="clearfix"> <h2><a href="https://sarathlal.com">Sarathlal N</a></h2> <nav> <ul> <li><a href="https://sarathlal.com/about/">About Me</a></li> <li><a href="https://sarathlal.com/archive/">Archive</a></li> </ul> </nav> </header> <article class="post" itemscope itemtype="http://schema.org/CreativeWork"> <h1 class="entry-title" itemprop="headline">The Markdown markup language, syntax and examples</h1> <p>The Markdown is a markup language like HTML, but easy-to-read, easy-to-write plain text format and can be considerable as a minimal alternative to HTML.</p> <p>But never consider Markdown is an alternative to HTML programming. The Markdown is an alternative to HTML formatting. It is a tool for creating web documents. It simplifies HTML tags that can be usable to format a document.</p> <p>The philosophy behind Markdown is to produce web based content, which can be “published as-is, without looking like it’s been marked up with tags”. The Markdown is simple and you just need a plain text editor to type your content.</p> <p>Before learning any languages, we want to understand its syntaxes. Through this post, I like to summarize what I learn from Markdown markup language with examples.</p> <hr /> <h2 id="paragraph">paragraph</h2> <p>A paragraph in Markdown is simply one or more consecutive lines of text, separated by one or more blank lines.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>Lorem ipsum dolor sit amet, no nusquam noluisse invidunt pro.
+==========Make this line as blank==========
+Cum ut quidam scribentur, et audiam rationibus eum. Lorem tantas gubergren ut nec, his graeci iisque ea.
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;Lorem ipsum dolor sit amet, no nusquam noluisse invidunt pro.&lt;/p&gt;
+&lt;p&gt;Cum ut quidam scribentur, et audiam rationibus eum. Lorem tantas gubergren ut nec, his graeci iisque ea.&lt;/p&gt;
+</code></pre></div> <hr /> <h2 id="headers">Headers</h2> <p>The Markdown support two styles of header.</p> <ol> <li>Atx</li> <li>Setext</li> </ol> <h2 id="atx-style-headers">Atx style Headers</h2> <p>Atx style headers use 1 to 6 hash <code class="highlighter-rouge">#</code> characters at the start of the line, corresponding to header levels 1-6.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>#Heading one
+## Heading two
+### Heading three
+#### Heading four
+##### Heading five
+##### #Heading six
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;Heading one&lt;/h1&gt;
+&lt;h2&gt;Heading two&lt;/h2&gt;
+&lt;h3&gt;Heading three&lt;/h3&gt;
+&lt;h4&gt;Heading four&lt;/h4&gt;
+&lt;h5&gt;Heading five&lt;/h5&gt;
+&lt;h6&gt;Heading six&lt;/h6&gt;
+</code></pre></div> <h2 id="setext-style-headers">Setext style headers</h2> <p>Setext-style headers are using underlined equal signs <code class="highlighter-rouge">=</code> (for first-level headers) and underlined dashes <code class="highlighter-rouge">-</code> (for second-level headers).</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>Heading one
+===========
+
+Heading two
+-----------
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;Heading one&lt;/h1&gt;
+
+&lt;h2&gt;Heading two&lt;/h2&gt;
+</code></pre></div> <hr /> <h2 id="block-quotes">Block quotes</h2> <p>Markdown uses <code class="highlighter-rouge">&gt;</code> character for block quoting. We want to use <code class="highlighter-rouge">&gt;</code> character before paragraph in a block quote.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&gt;    Esse euismod feugait id cum, mel ipsum consequuntur et. An meis utroque inimicus nam, saepe fierent complectitur eu vis. Id docendi suavitate us, vis stet illum impetus no. No vel moderatius reprehendunt, mucius tibique mei at.
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;blockquote&gt;
+&lt;p&gt;Esse euismod feugait id cum, mel ipsum consequuntur et.
+An meis utroque inimicus nam, saepe fierent complectitur eu vis.
+Id docendi suavitate us, vis stet illum impetus no.
+No vel moderatius reprehendunt, mucius tibique mei at.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre></div> <hr /> <h2 id="ordered-list">Ordered list</h2> <p>In Markdown, Ordered lists can be formated via numbers followed by a dot and then a period.</p> <p><strong>Markdown Example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>1. List item 1
+2. List item 2
+3. List item 3
+4. List item 4
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ol&gt;
+&lt;li&gt;List item 1&lt;/li&gt;
+&lt;li&gt;List item 2&lt;/li&gt;
+&lt;li&gt;List item 3&lt;/li&gt;
+&lt;li&gt;List item 4&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div> <p>If you want to create a nested list, apply a tab or minimum 4 spaces before the next level list entries.</p> <p><strong>Markdown Example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>1. List item 1
+2. List item 2
+	1. List item 2.1
+	2. List item 2.2
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ol&gt;
+&lt;li&gt;List item 1&lt;/li&gt;
+&lt;li&gt;List item 2&lt;ol&gt;
+	 &lt;li&gt;List item 2.1&lt;/li&gt;
+	 &lt;li&gt;List item 2.2&lt;/li&gt;&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div> <hr /> <h2 id="unordered-lists">Unordered lists</h2> <p>In Markdown, Unordered lists can be formated via either asterisks(*), pluses(+), and hyphens(-) followed by a period.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>* List item 1
+* List item 2
+* List item 3
+* List item 4
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
+&lt;li&gt;List item 1&lt;/li&gt;
+&lt;li&gt;List item 2&lt;/li&gt;
+&lt;li&gt;List item 3&lt;/li&gt;
+&lt;li&gt;List item 4&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div> <hr /> <h2 id="code-blocks">Code blocks</h2> <p>The Markdown support pre-formatted code blocks in posts. To make a code block, indent every line of the code by at least 4 spaces or 1 tab.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>This is a normal paragraph
+	This is the first line of code block
+	This is the second line of code block
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;This is a normal paragraph&lt;/p&gt;
+&lt;pre&gt;This is the first line of code block
+This is the second line of code block&lt;/pre&gt;
+</code></pre></div> <hr /> <h2 id="horizontal-lines">Horizontal lines</h2> <p>The Markdown can produce a horizontal rule tag <code class="highlighter-rouge">(&lt;hr /&gt;)</code> by placing three or more hyphens, asterisks, or underscores on a line by themselves. We can add space in between them.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>--------
+********
+_______
+_ _ _ _ _
+* * * * *
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+</code></pre></div> <h2 id="links">Links</h2> <p>Markdown supports two style of links.</p> <ol> <li>Inline links</li> <li>Reference links</li> </ol> <h2 id="inline-links">Inline links</h2> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>This is the [home page](http://sarathlal.com/ "alt text of home") of my blog.
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;This is the &lt;a href="http://sarathlal.com/" title="alt text of home"&gt;home page&lt;/a&gt; of my blog.&lt;/p&gt;
+</code></pre></div> <h2 id="reference-links">Reference links</h2> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>This is the [Home page][1] of my blog. Some lorem ipsum comes here as a paragraph.
+
+[1]: http://sarathlal.com (alt title for my blog)
+</code></pre></div> <p>Note: In the above Markdown example, the first sentence is the Markdown formatting and second line is the link definition. We can define the link any where in our documents. Link definitions are only used for creating links during Markdown processing, and are stripped from our document in the HTML output.</p> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;This is the &lt;a href="http://sarathlal.com/" title="alt text of home"&gt;home page&lt;/a&gt; of my blog.&lt;/p&gt;
+</code></pre></div> <hr /> <h2 id="bold-and-italics">Bold and Italics</h2> <p>Instead of <code class="highlighter-rouge">&lt;b&gt;</code> and <code class="highlighter-rouge">&lt;i&gt;</code>, markdown use <code class="highlighter-rouge">&lt;strong&gt;</code> and <code class="highlighter-rouge">&lt;em&gt;</code> tags. They are similar in nature and more SEO friendly.</p> <p>Markdown consider single asterisks <code class="highlighter-rouge">(*)</code> and single underscores <code class="highlighter-rouge">(_)</code> as indicators of emphasis. Just wrap our text with it and Markdown will convert it in to emphasis characters.</p> <p>Also double asterisks <code class="highlighter-rouge">(**)</code> and double underscores <code class="highlighter-rouge">(__)</code> as indicators of emphasis. Just wrap our text with it and Markdown will convert it in to strong characters.</p> <p><strong>Markdown Example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>*This is a italic*
+_This is also italic_
+**This is bold**
+__This is also Bold__
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;em&gt;This is a italic&lt;/em&gt;
+&lt;em&gt;This is also italic&lt;/em&gt;
+&lt;strong&gt;This is bold&lt;/strong&gt;
+&lt;strong&gt;This is also Bold&lt;/strong&gt;
+</code></pre></div> <hr /> <h2 id="code">Code</h2> <p>To indicate a span of code, we want to wrap it with backtick quotes (`). A code span means code within a paragraph.</p> <p><strong>Markdown Example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>Use `printf()` function to output some thing.
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>Use &lt;code&gt;printf()&lt;/code&gt; function to output some thing.
+</code></pre></div> <hr /> <h2 id="images">Images</h2> <p>We know that adding image tag in a HTMl document using a plain text editor is enough difficult for bloggers. But in the Markdown, there is also some syntax to add images in our posts.</p> <p>Same like links, the Markdown support two style syntax to place an image.</p> <ol> <li>Inline image links</li> <li>Reference image links.</li> </ol> <p>The inline image link syntax is almost same like internal links.</p> <div class="highlighter-rouge"><pre class="highlight"><code>![Alt text for image](/path/to/img.jpg)
+or
+![Alt text for image](/path/to/img.jpg "Optional title")
+</code></pre></div> <p>The reference image link syntax is given below.</p> <div class="highlighter-rouge"><pre class="highlight"><code>![Alt text for image][id]
+
+[id]: url/to/image  "Optional title attribute"
+</code></pre></div> <p>Same like the reference links, the first line is the image formatting and second line is the image definition in Markdown. We can put image definition in any where in our post and it is stripped from HTML output.</p> <p>But the Markdown has no syntax for specifying the dimensions of an image; if this is important to us, we want to use regular HTML <code class="highlighter-rouge">&lt;img&gt;</code> tags.</p> <hr /> <h2 id="automatic-links">Automatic links</h2> <p>The markdown support a shortcut style for creating “automatic” links for URLs and email addresses. If we wrap the URL or email address with angle brackets, markdown consider it as a link.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;http://twitter.com&gt;
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://twitter.com"&gt;http://twitter.com&lt;/a&gt;
+</code></pre></div> <hr /> <h2 id="backslash-escapes">Backslash Escapes</h2> <p>Markdown allows us to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax.</p> <p>Markdown provides backslash escapes for the following characters.</p> <div class="highlighter-rouge"><pre class="highlight"><code>\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+</code></pre></div> <p>If we want to use any of these characters in our post, just add a backslash (``) before it.</p> <p><strong>Markdown example</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>\*This is italic\*
+</code></pre></div> <p><strong>HTML output</strong></p> <div class="highlighter-rouge"><pre class="highlight"><code>*This is italic*
+</code></pre></div> <p>We already discuss about italic and bold formatting in Markdown. But in this example, I use a backslash before asterisks. So this asterisks are escaped from Markdown formatting.</p> <hr /> <h2 id="special-characters">Special characters</h2> <p>If we want to use any special characters like <code class="highlighter-rouge">&gt;</code>,<code class="highlighter-rouge">&gt;</code>,<code class="highlighter-rouge">&amp;</code> etc, we want to escape it from Markdown formatting.</p> <p>That means, If we want to use them as literal characters, we must escape them as entities like <code class="highlighter-rouge">&amp;lt;</code>, and <code class="highlighter-rouge">&amp;amp;</code> etc.</p> <hr /> <h2 id="conclusion">conclusion</h2> <p>I tried to collect almost Markdown examples at here. Same like other posts in this blog, this post is also a exercise for me to learn the Markdown. So if you feel any doubt or confusion, just google about it.</p> <h3>Recent Posts</h3> <ol> <li><a href="https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/"> Handle plugin activation hook in multisite & single site - WordPress</a></li> <li><a href="https://sarathlal.com/get-wordpress-sql-query-details/"> Get WordPress SQL query details</a></li> <li><a href="https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress/"> Remove edit, view, trash and quick edit links within posts list of admin screen - WordPress</a></li> <li><a href="https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux/"> PHP Errors not displaying or not logging - LAMP server - Solved</a></li> <li><a href="https://sarathlal.com/display-all-hook-sequentialy-that-run-on-page-wordpress/"> Display all hooks sequentialy that run on a page - WordPress</a></li> </ol> <p class="entry-meta"> <span class="entry-time text-muted">This article was published on <time class="entry-time" itemprop="datePublished" datetime="2014-04-13T00:00:00+05:30">April 13, 2014</time></span> </p> <hr> <h3>Your Questions / Comments</h3> <p class="after-post">If you found this article interesting, found errors, or just want to discuss about them, please <a href="/about/">get in touch</a>.</p> </article> <!-- Footer --> <footer> </footer> <script> var toggle = document.getElementById("toggle"); var content = document.getElementById("form-container"); if(toggle){ toggle.addEventListener("click", function(event){ event.preventDefault(); toggle.style.display = 'none'; content.classList.toggle("show"); }, false); } </script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-46959192-1', 'auto'); ga('send', 'pageview'); </script> </div> </body> </html>

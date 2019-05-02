@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-05-02T07:50:54+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Handle plugin activation hook in multisite &amp;amp; single site - WordPress</title><link href="https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/" rel="alternate" type="text/html" title="Handle plugin activation hook in multisite &amp; single site - WordPress" /><published>2019-03-30T00:00:00+05:30</published><updated>2019-03-30T00:00:00+05:30</updated><id>https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress</id><content type="html" xml:base="https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/">&lt;p&gt;Do actions on plugin activation is an important task in all WordPress plugin. If we do some tweaks or save some data in the database during activation, handling plugin activation hook is too important.&lt;/p&gt;
+
+&lt;p&gt;If WordPress installation is a single site, we have to do the task in the installed WordPress itself on activation hook. For a multisite, normally we need to do the same task in all network site on activation hook.&lt;/p&gt;
+
+&lt;p&gt;Below you can find the code snippet to handle tasks in plugin activation for single site &amp;amp; multisite instance.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;register_activation_hook( __FILE__, '1345_activation_logic' );
+
+public static function 1345_activation_logic($network_active){
+	// If multisite
+	if ( function_exists( 'is_multisite' ) &amp;amp;&amp;amp; is_multisite() ) {
+			// If network activate, iterate through each site
+			if ( $network_active ) {
+					if ( false == is_super_admin() ) {
+							return;
+					}
+
+					$blogs = get_sites(); // default count is 100
+					foreach ( $blogs as $blog ) {
+						$blog_id = $blog-&amp;gt;blog_id;
+						switch_to_blog( $blog_id );
+						do_activation_hook(); // do your activation hook
+						restore_current_blog();
+					}
+			// single site activation in multisite
+			} else {
+					if ( false == current_user_can( 'activate_plugins' ) ) {
+							return;
+					}
+
+					do_activation_hook(); // do your activation hook
+			}
+	// Normal WordPress plugin activation
+	} else {
+			do_activation_hook(); // do your activation hook
+	}
+}
+
+
+// Action for creating new site in mulisite setup
+
+public static function 145561_activate_new_blog($blog_id) {
+	if (is_plugin_active_for_network(plugin_basename(__FILE__))) {
+		switch_to_blog($blog_id);
+		// do action for $blog_id
+		restore_current_blog();
+	}
+}
+add_action('wpmu_new_blog', '145561_activate_new_blog');
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Do actions on plugin activation is an important task in all WordPress plugin. If we do some tweaks or save some data in the database during activation, handling plugin activation hook is too important.</summary></entry><entry><title type="html">Get WordPress SQL query details</title><link href="https://sarathlal.com/get-wordpress-sql-query-details/" rel="alternate" type="text/html" title="Get WordPress SQL query details" /><published>2019-03-23T00:00:00+05:30</published><updated>2019-03-23T00:00:00+05:30</updated><id>https://sarathlal.com/get-wordpress-sql-query-details</id><content type="html" xml:base="https://sarathlal.com/get-wordpress-sql-query-details/">&lt;p&gt;When I debug WordPress, getting SQL query details is useful in some situations.&lt;/p&gt;
+
+&lt;p&gt;In the WordPress plugin repo, we can find some nice debug plugins to get query details. Also, we can use default WordPress options to get query details.&lt;/p&gt;
+
+&lt;p&gt;First, we need to add a definition in our &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define('SAVEQUERIES', true);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The SAVEQUERIES definition saves the database queries to an array and we can use that array to analyze those queries.&lt;/p&gt;
+
+&lt;p&gt;The array is stored in the global &lt;code class=&quot;highlighter-rouge&quot;&gt;$wpdb-&amp;gt;queries&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;print-last-sql-query-string&quot;&gt;Print last SQL query string&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_query
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;print-last-sql-query-result&quot;&gt;Print last SQL query result&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_result
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;print-last-sql-query-error&quot;&gt;Print last SQL query Error&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_error
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">When I debug WordPress, getting SQL query details is useful in some situations.</summary></entry><entry><title type="html">Remove edit, view, trash and quick edit links within posts list of admin screen - WordPress</title><link href="https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress/" rel="alternate" type="text/html" title="Remove edit, view, trash and quick edit links within posts list of admin screen - WordPress" /><published>2018-09-05T00:00:00+05:30</published><updated>2018-09-05T00:00:00+05:30</updated><id>https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress</id><content type="html" xml:base="https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress/">&lt;p&gt;&lt;img src=&quot;/images/2018/edit-view-trash-quick-edit-links-posts-wordpress.png&quot; alt=&quot;Remove edit, view, trash and quick edit links - WordPress&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use below code snippet to remove the edit, view, trash and quick edit links that we seen when we mouse over a post in the post list in admin screens.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'post_row_actions', 'remove_row_actions', 10, 1 );
+
+function remove_row_actions( $actions ){
+	// Confirm post type
+	if( get_post_type() === 'post' ){
+		unset( $actions['edit'] );
+		unset( $actions['view'] );
+		unset( $actions['trash'] );
+		unset( $actions['inline hide-if-no-js'] );
+	}    
+	return $actions;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">PHP Errors not displaying or not logging - LAMP server - Solved</title><link href="https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux/" rel="alternate" type="text/html" title="PHP Errors not displaying or not logging - LAMP server - Solved" /><published>2018-09-04T00:00:00+05:30</published><updated>2018-09-04T00:00:00+05:30</updated><id>https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux</id><content type="html" xml:base="https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux/">&lt;p&gt;I have to set up a new LAMP server in Linux &lt;code class=&quot;highlighter-rouge&quot;&gt;Mint 19&lt;/code&gt; on yesterday for WP development.&lt;/p&gt;
+
+&lt;p&gt;The configurations are,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Apache&lt;/li&gt;
+  &lt;li&gt;PHP 7&lt;/li&gt;
+  &lt;li&gt;MySQL 5&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Later half an hour, I realize that PHP errors are not displaying or not logging.&lt;/p&gt;
+
+&lt;p&gt;The issue is due to configuration in PHP configuration file.&lt;/p&gt;
+
+&lt;p&gt;Solved it by updating 2 &lt;code class=&quot;highlighter-rouge&quot;&gt;php.ini&lt;/code&gt; files. The files location are given below. May the file path will different as per our OS, Apache &amp;amp; PHP version.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/php/7.2/apache2/php.ini 
+/etc/php/7.2/cli/php.ini 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The configurations are given below. We need to find out the line of configuration and update the values. There is chance for multiple lines for same configuration.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;display_errors = On
+track_errors = On
+log_errors = On
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then need to restart Apache.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If still facing issue on error reporting, restart the server.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="LAMP Server" /><summary type="html">I have to set up a new LAMP server in Linux Mint 19 on yesterday for WP development.</summary></entry><entry><title type="html">Display all hooks sequentialy that run on a page - WordPress</title><link href="https://sarathlal.com/display-all-hook-sequentialy-that-run-on-page-wordpress/" rel="alternate" type="text/html" title="Display all hooks sequentialy that run on a page - WordPress" /><published>2018-08-04T00:00:00+05:30</published><updated>2018-08-04T00:00:00+05:30</updated><id>https://sarathlal.com/display-all-hook-sequentialy-that-run-on-page-wordpress</id><content type="html" xml:base="https://sarathlal.com/display-all-hook-sequentialy-that-run-on-page-wordpress/">&lt;p&gt;Debugging WordPress code is an interesting job. If the issue is too complicated, finding the cause is an awesome activity.&lt;/p&gt;
+
+&lt;p&gt;As a technical support in a development company, often I have to face such issue. Our clients always will come with some interesting bugs. Almost, the cause is not from our plugin or theme. But we have responsibility to find out the cause.&lt;/p&gt;
+
+&lt;p&gt;In such situations, getting an idea about all hooks that run on that WordPress page helped me a lot. Below you can find the function that I’m using for debugging.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action( 'all', 'th_show_all_hooks' );
+	
+function th_show_all_hooks( $tag ) {
+	if(!(is_admin())){ // Display Hooks in front end pages only
+		$debug_tags = array();
+		global $debug_tags;
+		if ( in_array( $tag, $debug_tags ) ) {
+			return;
+		}
+		echo &quot;&amp;lt;pre&amp;gt;&quot; . $tag . &quot;&amp;lt;/pre&amp;gt;&quot;;
+		$debug_tags[] = $tag;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can use above code in your theme’s &lt;code class=&quot;highlighter-rouge&quot;&gt;functions.php&lt;/code&gt; file or in your custom plugin file. Now this code only display hooks in front end pages. To track hooks in backend, just update the conditional tag.&lt;/p&gt;
+
+&lt;p&gt;Note: This  function only works in server with PHP 5.3+ versions and a global variable is used (It consider as bad practice).&lt;/p&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Debugging WordPress code is an interesting job. If the issue is too complicated, finding the cause is an awesome activity.</summary></entry><entry><title type="html">Get downloadable files of a downloadable product - WooCoomerce</title><link href="https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product/" rel="alternate" type="text/html" title="Get downloadable files of a downloadable product - WooCoomerce" /><published>2018-07-25T00:00:00+05:30</published><updated>2018-07-25T00:00:00+05:30</updated><id>https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product</id><content type="html" xml:base="https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product/">&lt;p&gt;Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; object to function &amp;amp; that function will return the &lt;code class=&quot;highlighter-rouge&quot;&gt;files&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt; in array format.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function get_downloads($_product)
+{
+	$downloads = array();
+	if ($_product-&amp;gt;is_downloadable()) {
+		foreach ($_product-&amp;gt;get_downloads() as $file_id =&amp;gt; $file) {
+			$downloads[] = array('id' =&amp;gt; $file_id, 'name' =&amp;gt; $file['name'], 'file' =&amp;gt; $file['file']);
+		}
+	}
+	return $downloads;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the product object to function &amp;amp; that function will return the files, name &amp;amp; id in array format.</summary></entry><entry><title type="html">Add actions based on WooCoomerce order status</title><link href="https://sarathlal.com/add-actions-based-woocommerce-order-status/" rel="alternate" type="text/html" title="Add actions based on WooCoomerce order status" /><published>2018-07-17T00:00:00+05:30</published><updated>2018-07-17T00:00:00+05:30</updated><id>https://sarathlal.com/add-actions-based-woocommerce-order-status</id><content type="html" xml:base="https://sarathlal.com/add-actions-based-woocommerce-order-status/">&lt;p&gt;Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Order status - `pending`
+add_action( ‘woocommerce_order_status_pending', ‘order_pending');
+function order_pending($order_id) {
+	
+	// Do your logic here
+	
+}
+
+
+// Order status - `failed`
+add_action( ‘woocommerce_order_status_failed', ‘order_failed');
+function order_failed($order_id) {
+	
+	// Do your logic here
+	
+}
+
+// Order status - `on-hold`
+add_action( 'woocommerce_order_status_on-hold', ‘order_hold');
+function order_hold($order_id) {
+	
+	// Do your logic here
+	
+}
+
+// Order status - `processing`
+add_action( ‘woocommerce_order_status_processing', ‘order_processing');
+function order_processing($order_id) {
+	
+	// Do your logic here
+	
+}
+
+// Order status - `completed`
+add_action( ‘woocommerce_order_status_completed', ‘order_completed');
+function order_completed($order_id) {
+	
+	// Do your logic here
+	
+}
+
+// Order status - `refunded`
+add_action( ‘woocommerce_order_status_refunded', ‘order_refunded');
+function order_refunded($order_id) {
+	
+	// Do your logic here
+	
+}
+
+// Order status - `cancelled`
+add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled');
+function order_cancelled($order_id) {
+	
+	// Do your logic here
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes. // Order status - `pending` add_action( ‘woocommerce_order_status_pending', ‘order_pending'); function order_pending($order_id) { // Do your logic here } // Order status - `failed` add_action( ‘woocommerce_order_status_failed', ‘order_failed'); function order_failed($order_id) { // Do your logic here } // Order status - `on-hold` add_action( 'woocommerce_order_status_on-hold', ‘order_hold'); function order_hold($order_id) { // Do your logic here } // Order status - `processing` add_action( ‘woocommerce_order_status_processing', ‘order_processing'); function order_processing($order_id) { // Do your logic here } // Order status - `completed` add_action( ‘woocommerce_order_status_completed', ‘order_completed'); function order_completed($order_id) { // Do your logic here } // Order status - `refunded` add_action( ‘woocommerce_order_status_refunded', ‘order_refunded'); function order_refunded($order_id) { // Do your logic here } // Order status - `cancelled` add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled'); function order_cancelled($order_id) { // Do your logic here }</summary></entry><entry><title type="html">Stop Google from translating datepicker input field</title><link href="https://sarathlal.com/stop-google-from-translating-datepicker-input-field/" rel="alternate" type="text/html" title="Stop Google from translating datepicker input field" /><published>2018-07-11T00:00:00+05:30</published><updated>2018-07-11T00:00:00+05:30</updated><id>https://sarathlal.com/stop-google-from-translating-datepicker-input-field</id><content type="html" xml:base="https://sarathlal.com/stop-google-from-translating-datepicker-input-field/">&lt;p&gt;If we translate form with datepicker using Google translate, the field may show &lt;code class=&quot;highlighter-rouge&quot;&gt;NaN/NaN/NaN&lt;/code&gt; instead of selected date after compleeting translation.&lt;/p&gt;
+
+&lt;p&gt;The Google have solution for it. We need to add &lt;code class=&quot;highlighter-rouge&quot;&gt;notranslate&lt;/code&gt; to the field or its parent element. Google translate never consider content within this classs for translation.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; class=&quot;datepicker notranslate&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If we are using jQuery &amp;amp; jQuery UI datepicker, we can also add class using jQuery during initialization of datepicker.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function() {
+    $(&quot;.datepicker&quot;).datepicker();
+    $('.ui-datepicker').addClass('notranslate');
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">If we translate form with datepicker using Google translate, the field may show NaN/NaN/NaN instead of selected date after compleeting translation.</summary></entry><entry><title type="html">Unzip zip file using PHP</title><link href="https://sarathlal.com/unzip-zip-file-php/" rel="alternate" type="text/html" title="Unzip zip file using PHP" /><published>2018-02-03T00:00:00+05:30</published><updated>2018-02-03T00:00:00+05:30</updated><id>https://sarathlal.com/unzip-zip-file-php</id><content type="html" xml:base="https://sarathlal.com/unzip-zip-file-php/">&lt;p&gt;When I move some application to servers, in some rare cases, client server was little difficult to manage. The GUI was very messy or missing &amp;amp; there is no SSH access.&lt;/p&gt;
+
+&lt;p&gt;Normally we upload files &amp;amp; folders in zip format to improve speed. Also if we upload zip files, there is very less chance for file / folder missing.&lt;/p&gt;
+
+&lt;p&gt;After uploading, I need to extract the content without GUI &amp;amp; SSH access. Below you can find few methods that help me to solve the problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-php-built-in-extensions&quot;&gt;Using PHP built-in extensions&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$zip = new ZipArchive;
+$res = $zip-&amp;gt;open('file.zip');
+if ($res === TRUE) {
+  $zip-&amp;gt;extractTo('/myzips/extract_path/');
+  $zip-&amp;gt;close();
+  echo 'Done!';
+} else {
+  echo 'Failed!';
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note: If you need to extract in the same directory, use &lt;code class=&quot;highlighter-rouge&quot;&gt;getcwd()&lt;/code&gt; function to get current path.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//$zip-&amp;gt;extractTo('/myzips/extract_path/');
+$zip-&amp;gt;extractTo(getcwd());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;using-unix-unzip-command&quot;&gt;Using Unix unzip command&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php system('unzip wordpress.zip'); ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">When I move some application to servers, in some rare cases, client server was little difficult to manage. The GUI was very messy or missing &amp;amp; there is no SSH access.</summary></entry><entry><title type="html">Handle custom form in WordPress</title><link href="https://sarathlal.com/handle-custom-form-wordpress/" rel="alternate" type="text/html" title="Handle custom form in WordPress" /><published>2018-01-27T00:00:00+05:30</published><updated>2018-01-27T00:00:00+05:30</updated><id>https://sarathlal.com/handle-custom-form-wordpress</id><content type="html" xml:base="https://sarathlal.com/handle-custom-form-wordpress/">&lt;p&gt;Have you ever tried custom forms in WordPress. It is too easier than you think.&lt;/p&gt;
+
+&lt;p&gt;Here is my sample form.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;form method='post' action=''&amp;gt;
+	&amp;lt;input name='name' type='text' value='' /&amp;gt;
+	&amp;lt;?php echo wp_nonce_field('handle_custom_form', 'nonce_custom_form'); ?&amp;gt;
+	&amp;lt;input type='submit' value='Submit'/&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Form handling function for sample form is given below. Always strictly validate form fields.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public function wpsa_handle_custom_form()
+{
+	if (!empty($_POST['nonce_custom_form']))
+	{
+		if (!wp_verify_nonce($_POST['nonce_custom_form'], 'handle_custom_form'))
+		{
+			die('You are not authorized to perform this action.');
+		} else
+		{
+			$error = null;
+			if (empty($_POST['name']))
+			{
+				$error = new WP_Error('empty_error', __('Please enter name.', 'your-text-domain'));
+				wp_die($error-&amp;gt;get_error_message(), __('CustomForm Error', 'your-text-domain'));
+			}
+			else
+			{
+				die('Its safe to do further processing on submitted data.');
+				//Process submitted data from here
+				//$name = $_POST['name'];
+			}
+		}
+	}
+}
+
+add_action('init', 'wpsa_handle_custom_form');
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Have you ever tried custom forms in WordPress. It is too easier than you think.</summary></entry></feed>
