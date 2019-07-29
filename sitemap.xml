@@ -3,6 +3,36 @@
   
     
     <url>
+      <loc>https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/</loc>
+      
+        <lastmod>2019-07-28T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://sarathlal.com/get-wordpress-image-element-from-attachment-url/</loc>
+      
+        <lastmod>2019-07-25T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/</loc>
       
         <lastmod>2019-03-30T00:00:00+05:30</lastmod>
@@ -4491,7 +4521,7 @@
     <url>
       <loc>https://sarathlal.com/404.html</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4506,7 +4536,7 @@
     <url>
       <loc>https://sarathlal.com/about/</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4521,7 +4551,7 @@
     <url>
       <loc>https://sarathlal.com/archive/</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -4536,7 +4566,7 @@
     <url>
       <loc>https://sarathlal.com/contact/</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4551,7 +4581,7 @@
     <url>
       <loc>https://sarathlal.com/</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -4568,7 +4598,7 @@
     <url>
       <loc>https://sarathlal.com/feed.xml</loc>
       
-        <lastmod>2019-05-02T07:50:54+05:30</lastmod>
+        <lastmod>2019-07-29T23:46:53+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
