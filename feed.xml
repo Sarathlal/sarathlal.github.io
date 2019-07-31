@@ -1,5 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-07-29T23:46:53+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Conditional tags for order thank you page - WooCommerce</title><link href="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/" rel="alternate" type="text/html" title="Conditional tags for order thank you page - WooCommerce" /><published>2019-07-28T00:00:00+05:30</published><updated>2019-07-28T00:00:00+05:30</updated><id>https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/">&lt;p&gt;In WooCommerce, if you need to check that current page is an order thank you page, you can  use below conditional tags in your code.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-07-31T08:08:52+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Add phone number to the output of the addresses on the “My Account” page - WooCommerce</title><link href="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/" rel="alternate" type="text/html" title="Add phone number to the output of the addresses on the &quot;My Account&quot; page - WooCommerce" /><published>2019-07-30T00:00:00+05:30</published><updated>2019-07-30T00:00:00+05:30</updated><id>https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/add-phone-number-output-addresses-my-account-page-woocommerce.gif&quot; alt=&quot;Add phone number to the output of the addresses on the &amp;quot;My Account&amp;quot; page - WooCommerce&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We need to add 3 filters to modify the output of the addresses on the “My Account” page/shortcode for WooCommerce.&lt;/p&gt;
+
+&lt;p&gt;First, we will need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_my_account_my_address_formatted_address&lt;/code&gt; to populate any new values we want to add.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'woocommerce_my_account_my_address_formatted_address', 'er34d_formatted_address',10, 3 );
+
+function er34d_formatted_address( $args, $customer_id, $name ){
+	// the phone is saved as billing_phone and shipping_phone
+	$args['phone'] = get_user_meta( $customer_id, $name . '_phone', true );
+	return $args;
+} 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next use &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_localisation_address_formats&lt;/code&gt; to modify the formatting of the address. We have do this as per country locale. But now I ignore that condition.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// modify the address formats
+add_filter( 'woocommerce_localisation_address_formats', '3e45_localisation_address_formats');
+
+function 3e45_localisation_address_formats( $formats ){
+	foreach ( $formats as $key =&amp;gt; &amp;amp;$format ) {
+		// put a break and then the phone after each format.
+		$format .= &quot;\n{phone}&quot;;
+	}
+	return $formats;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Last, we need to update &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_formatted_address_replacements&lt;/code&gt; to have WooCommerce replace your replacement string with the actual data.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// add the replacement value
+add_filter( 'woocommerce_formatted_address_replacements', '3er45_formatted_address_replacements', 10, 2 );
+
+function 3er45_formatted_address_replacements( $replacements, $args ){
+	// we want to replace {phone} in the format with the data we populated
+	$replacements['{phone}'] = $args['phone'];
+	return $replacements;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">Conditional tags for order thank you page - WooCommerce</title><link href="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/" rel="alternate" type="text/html" title="Conditional tags for order thank you page - WooCommerce" /><published>2019-07-28T00:00:00+05:30</published><updated>2019-07-28T00:00:00+05:30</updated><id>https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/">&lt;p&gt;In WooCommerce, if you need to check that current page is an order thank you page, you can  use below conditional tags in your code.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_order_received_page()&lt;/code&gt;&lt;/li&gt;
@@ -250,19 +292,4 @@ function order_cancelled($order_id) {
 	
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes. // Order status - `pending` add_action( ‘woocommerce_order_status_pending', ‘order_pending'); function order_pending($order_id) { // Do your logic here } // Order status - `failed` add_action( ‘woocommerce_order_status_failed', ‘order_failed'); function order_failed($order_id) { // Do your logic here } // Order status - `on-hold` add_action( 'woocommerce_order_status_on-hold', ‘order_hold'); function order_hold($order_id) { // Do your logic here } // Order status - `processing` add_action( ‘woocommerce_order_status_processing', ‘order_processing'); function order_processing($order_id) { // Do your logic here } // Order status - `completed` add_action( ‘woocommerce_order_status_completed', ‘order_completed'); function order_completed($order_id) { // Do your logic here } // Order status - `refunded` add_action( ‘woocommerce_order_status_refunded', ‘order_refunded'); function order_refunded($order_id) { // Do your logic here } // Order status - `cancelled` add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled'); function order_cancelled($order_id) { // Do your logic here }</summary></entry><entry><title type="html">Stop Google from translating datepicker input field</title><link href="https://sarathlal.com/stop-google-from-translating-datepicker-input-field/" rel="alternate" type="text/html" title="Stop Google from translating datepicker input field" /><published>2018-07-11T00:00:00+05:30</published><updated>2018-07-11T00:00:00+05:30</updated><id>https://sarathlal.com/stop-google-from-translating-datepicker-input-field</id><content type="html" xml:base="https://sarathlal.com/stop-google-from-translating-datepicker-input-field/">&lt;p&gt;If we translate form with datepicker using Google translate, the field may show &lt;code class=&quot;highlighter-rouge&quot;&gt;NaN/NaN/NaN&lt;/code&gt; instead of selected date after compleeting translation.&lt;/p&gt;
-
-&lt;p&gt;The Google have solution for it. We need to add &lt;code class=&quot;highlighter-rouge&quot;&gt;notranslate&lt;/code&gt; to the field or its parent element. Google translate never consider content within this classs for translation.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; class=&quot;datepicker notranslate&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If we are using jQuery &amp;amp; jQuery UI datepicker, we can also add class using jQuery during initialization of datepicker.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$(function() {
-    $(&quot;.datepicker&quot;).datepicker();
-    $('.ui-datepicker').addClass('notranslate');
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">If we translate form with datepicker using Google translate, the field may show NaN/NaN/NaN instead of selected date after compleeting translation.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes. // Order status - `pending` add_action( ‘woocommerce_order_status_pending', ‘order_pending'); function order_pending($order_id) { // Do your logic here } // Order status - `failed` add_action( ‘woocommerce_order_status_failed', ‘order_failed'); function order_failed($order_id) { // Do your logic here } // Order status - `on-hold` add_action( 'woocommerce_order_status_on-hold', ‘order_hold'); function order_hold($order_id) { // Do your logic here } // Order status - `processing` add_action( ‘woocommerce_order_status_processing', ‘order_processing'); function order_processing($order_id) { // Do your logic here } // Order status - `completed` add_action( ‘woocommerce_order_status_completed', ‘order_completed'); function order_completed($order_id) { // Do your logic here } // Order status - `refunded` add_action( ‘woocommerce_order_status_refunded', ‘order_refunded'); function order_refunded($order_id) { // Do your logic here } // Order status - `cancelled` add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled'); function order_cancelled($order_id) { // Do your logic here }</summary></entry></feed>
