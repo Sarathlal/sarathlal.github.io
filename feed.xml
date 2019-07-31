@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-07-31T08:08:52+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Add phone number to the output of the addresses on the “My Account” page - WooCommerce</title><link href="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/" rel="alternate" type="text/html" title="Add phone number to the output of the addresses on the &quot;My Account&quot; page - WooCommerce" /><published>2019-07-30T00:00:00+05:30</published><updated>2019-07-30T00:00:00+05:30</updated><id>https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/add-phone-number-output-addresses-my-account-page-woocommerce.gif&quot; alt=&quot;Add phone number to the output of the addresses on the &amp;quot;My Account&amp;quot; page - WooCommerce&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-07-31T21:47:21+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Change shipping and billing address title - WooCommerce</title><link href="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/" rel="alternate" type="text/html" title="Change shipping and billing address title - WooCommerce" /><published>2019-07-31T00:00:00+05:30</published><updated>2019-07-31T00:00:00+05:30</updated><id>https://sarathlal.com/change-shipping-billing-address-title-woocommerce</id><content type="html" xml:base="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/change-billing-shipping-address-title-woocommerce.gif&quot; alt=&quot;Change shipping and billing address title - WooCommerce&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you like to modify the title of the addresses on the “My Account” page for WooCommerce.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'woocommerce_my_account_get_addresses', 'er45d_woo_change_title_account' );
+function er45d_woo_change_title_account( $account_title ) {
+	$account_title = array(
+		'billing' =&amp;gt; __( 'New Billing Address', 'text-domain' ),
+		'shipping' =&amp;gt; __( 'New Shipping Address', 'text-domain' ),
+	);
+	
+	return $account_title;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">Add phone number to the output of the addresses on the “My Account” page - WooCommerce</title><link href="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/" rel="alternate" type="text/html" title="Add phone number to the output of the addresses on the &quot;My Account&quot; page - WooCommerce" /><published>2019-07-30T00:00:00+05:30</published><updated>2019-07-30T00:00:00+05:30</updated><id>https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/add-phone-number-output-addresses-my-account-page-woocommerce.gif&quot; alt=&quot;Add phone number to the output of the addresses on the &amp;quot;My Account&amp;quot; page - WooCommerce&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We need to add 3 filters to modify the output of the addresses on the “My Account” page/shortcode for WooCommerce.&lt;/p&gt;
 
@@ -233,63 +247,4 @@ function th_show_all_hooks( $tag ) {
 	return $downloads;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the product object to function &amp;amp; that function will return the files, name &amp;amp; id in array format.</summary></entry><entry><title type="html">Add actions based on WooCoomerce order status</title><link href="https://sarathlal.com/add-actions-based-woocommerce-order-status/" rel="alternate" type="text/html" title="Add actions based on WooCoomerce order status" /><published>2018-07-17T00:00:00+05:30</published><updated>2018-07-17T00:00:00+05:30</updated><id>https://sarathlal.com/add-actions-based-woocommerce-order-status</id><content type="html" xml:base="https://sarathlal.com/add-actions-based-woocommerce-order-status/">&lt;p&gt;Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Order status - `pending`
-add_action( ‘woocommerce_order_status_pending', ‘order_pending');
-function order_pending($order_id) {
-	
-	// Do your logic here
-	
-}
-
-
-// Order status - `failed`
-add_action( ‘woocommerce_order_status_failed', ‘order_failed');
-function order_failed($order_id) {
-	
-	// Do your logic here
-	
-}
-
-// Order status - `on-hold`
-add_action( 'woocommerce_order_status_on-hold', ‘order_hold');
-function order_hold($order_id) {
-	
-	// Do your logic here
-	
-}
-
-// Order status - `processing`
-add_action( ‘woocommerce_order_status_processing', ‘order_processing');
-function order_processing($order_id) {
-	
-	// Do your logic here
-	
-}
-
-// Order status - `completed`
-add_action( ‘woocommerce_order_status_completed', ‘order_completed');
-function order_completed($order_id) {
-	
-	// Do your logic here
-	
-}
-
-// Order status - `refunded`
-add_action( ‘woocommerce_order_status_refunded', ‘order_refunded');
-function order_refunded($order_id) {
-	
-	// Do your logic here
-	
-}
-
-// Order status - `cancelled`
-add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled');
-function order_cancelled($order_id) {
-	
-	// Do your logic here
-	
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Have you ever tried to do some actions based on WooCommerce order status? Here is the examples for whole hooks that is available during WooCommerce order status changes. // Order status - `pending` add_action( ‘woocommerce_order_status_pending', ‘order_pending'); function order_pending($order_id) { // Do your logic here } // Order status - `failed` add_action( ‘woocommerce_order_status_failed', ‘order_failed'); function order_failed($order_id) { // Do your logic here } // Order status - `on-hold` add_action( 'woocommerce_order_status_on-hold', ‘order_hold'); function order_hold($order_id) { // Do your logic here } // Order status - `processing` add_action( ‘woocommerce_order_status_processing', ‘order_processing'); function order_processing($order_id) { // Do your logic here } // Order status - `completed` add_action( ‘woocommerce_order_status_completed', ‘order_completed'); function order_completed($order_id) { // Do your logic here } // Order status - `refunded` add_action( ‘woocommerce_order_status_refunded', ‘order_refunded'); function order_refunded($order_id) { // Do your logic here } // Order status - `cancelled` add_action( ‘woocommerce_order_status_cancelled', ‘order_cancelled'); function order_cancelled($order_id) { // Do your logic here }</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the product object to function &amp;amp; that function will return the files, name &amp;amp; id in array format.</summary></entry></feed>
