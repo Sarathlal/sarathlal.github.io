@@ -1,5 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-07-31T21:47:21+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Change shipping and billing address title - WooCommerce</title><link href="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/" rel="alternate" type="text/html" title="Change shipping and billing address title - WooCommerce" /><published>2019-07-31T00:00:00+05:30</published><updated>2019-07-31T00:00:00+05:30</updated><id>https://sarathlal.com/change-shipping-billing-address-title-woocommerce</id><content type="html" xml:base="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/change-billing-shipping-address-title-woocommerce.gif&quot; alt=&quot;Change shipping and billing address title - WooCommerce&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2019-08-15T21:41:53+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Get details about available image sizes - WordPress</title><link href="https://sarathlal.com/get-details-available-image-sizes-wordpress/" rel="alternate" type="text/html" title="Get details about available image sizes - WordPress" /><published>2019-08-02T00:00:00+05:30</published><updated>2019-08-02T00:00:00+05:30</updated><id>https://sarathlal.com/get-details-available-image-sizes-wordpress</id><content type="html" xml:base="https://sarathlal.com/get-details-available-image-sizes-wordpress/">&lt;p&gt;Recently, when I develop a WordPress theme, I need details about all available image sizes for the theme customizer module. I need details about custom image sizes added by other plugins (Eg. WooCommerce etc) &amp;amp; default WordPress image sizes.&lt;/p&gt;
+
+&lt;p&gt;The WordPress core doesn’t have a native method for getting all the details. So I used the below function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
+ * Get all the registered image sizes along with their dimensions
+ *
+ * @global array $_wp_additional_image_sizes
+ *
+ * @link http://core.trac.wordpress.org/ticket/18947 Reference ticket
+ *
+ * @return array $image_sizes The image sizes
+ */
+function _get_all_image_sizes() {
+	global $_wp_additional_image_sizes;
+
+	$default_image_sizes = get_intermediate_image_sizes();
+
+	foreach ( $default_image_sizes as $size ) {
+		$image_sizes[ $size ][ 'width' ] = intval( get_option( &quot;{$size}_size_w&quot; ) );
+		$image_sizes[ $size ][ 'height' ] = intval( get_option( &quot;{$size}_size_h&quot; ) );
+		$image_sizes[ $size ][ 'crop' ] = get_option( &quot;{$size}_crop&quot; ) ? get_option( &quot;{$size}_crop&quot; ) : false;
+	}
+
+	if ( isset( $_wp_additional_image_sizes ) &amp;amp;&amp;amp; count( $_wp_additional_image_sizes ) ) {
+		$image_sizes = array_merge( $image_sizes, $_wp_additional_image_sizes );
+	}
+
+	return $image_sizes;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The output will be an array like below one.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Array
+(
+	[thumbnail] =&amp;gt; Array
+		(
+			[width] =&amp;gt; 150
+			[height] =&amp;gt; 150
+			[crop] =&amp;gt; 1
+		)
+
+	[medium] =&amp;gt; Array
+		(
+			[width] =&amp;gt; 300
+			[height] =&amp;gt; 300
+			[crop] =&amp;gt; 
+		)
+
+	[medium_large] =&amp;gt; Array
+		(
+			[width] =&amp;gt; 768
+			[height] =&amp;gt; 0
+			[crop] =&amp;gt; 
+		)
+
+	[large] =&amp;gt; Array
+		(
+			[width] =&amp;gt; 1024
+			[height] =&amp;gt; 1024
+			[crop] =&amp;gt; 
+		)
+
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Recently, when I develop a WordPress theme, I need details about all available image sizes for the theme customizer module. I need details about custom image sizes added by other plugins (Eg. WooCommerce etc) &amp;amp; default WordPress image sizes.</summary></entry><entry><title type="html">Change shipping and billing address title - WooCommerce</title><link href="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/" rel="alternate" type="text/html" title="Change shipping and billing address title - WooCommerce" /><published>2019-07-31T00:00:00+05:30</published><updated>2019-07-31T00:00:00+05:30</updated><id>https://sarathlal.com/change-shipping-billing-address-title-woocommerce</id><content type="html" xml:base="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/change-billing-shipping-address-title-woocommerce.gif&quot; alt=&quot;Change shipping and billing address title - WooCommerce&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you like to modify the title of the addresses on the “My Account” page for WooCommerce.&lt;/p&gt;
 
@@ -234,17 +301,4 @@ function th_show_all_hooks( $tag ) {
 
 &lt;p&gt;You can use above code in your theme’s &lt;code class=&quot;highlighter-rouge&quot;&gt;functions.php&lt;/code&gt; file or in your custom plugin file. Now this code only display hooks in front end pages. To track hooks in backend, just update the conditional tag.&lt;/p&gt;
 
-&lt;p&gt;Note: This  function only works in server with PHP 5.3+ versions and a global variable is used (It consider as bad practice).&lt;/p&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Debugging WordPress code is an interesting job. If the issue is too complicated, finding the cause is an awesome activity.</summary></entry><entry><title type="html">Get downloadable files of a downloadable product - WooCoomerce</title><link href="https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product/" rel="alternate" type="text/html" title="Get downloadable files of a downloadable product - WooCoomerce" /><published>2018-07-25T00:00:00+05:30</published><updated>2018-07-25T00:00:00+05:30</updated><id>https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product</id><content type="html" xml:base="https://sarathlal.com/get-downloadable-files-woocommerce-downloadable-product/">&lt;p&gt;Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; object to function &amp;amp; that function will return the &lt;code class=&quot;highlighter-rouge&quot;&gt;files&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt; in array format.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function get_downloads($_product)
-{
-	$downloads = array();
-	if ($_product-&amp;gt;is_downloadable()) {
-		foreach ($_product-&amp;gt;get_downloads() as $file_id =&amp;gt; $file) {
-			$downloads[] = array('id' =&amp;gt; $file_id, 'name' =&amp;gt; $file['name'], 'file' =&amp;gt; $file['file']);
-		}
-	}
-	return $downloads;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><category term="WooCommerce" /><summary type="html">Today, I need to get all downloadable files of a WooCommerce downloadable product in my custom function. Below, you can find the code snippet that I have used for this purpose. We need to pass the product object to function &amp;amp; that function will return the files, name &amp;amp; id in array format.</summary></entry></feed>
+&lt;p&gt;Note: This  function only works in server with PHP 5.3+ versions and a global variable is used (It consider as bad practice).&lt;/p&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Debugging WordPress code is an interesting job. If the issue is too complicated, finding the cause is an awesome activity.</summary></entry></feed>
