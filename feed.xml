@@ -1,5 +1,217 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2020-02-13T22:33:08+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Redirect single pages of post type in to post type archive page - WordPress</title><link href="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/" rel="alternate" type="text/html" title="Redirect single pages of post type in to post type archive page - WordPress" /><published>2019-08-03T00:00:00+05:30</published><updated>2019-08-03T00:00:00+05:30</updated><id>https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress</id><content type="html" xml:base="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/">&lt;p&gt;In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2020-03-07T19:57:38+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Action hooks that trigger on, before or after add, update or delete actions of option - WordPress</title><link href="https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress/" rel="alternate" type="text/html" title="Action hooks that trigger on, before or after add, update or delete actions of option - WordPress" /><published>2020-03-07T00:00:00+05:30</published><updated>2020-03-07T00:00:00+05:30</updated><id>https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress</id><content type="html" xml:base="https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress/">&lt;p&gt;If we need to debug add, update or delete actions on the &lt;code class=&quot;highlighter-rouge&quot;&gt;wp_options&lt;/code&gt; table, we can use below hooks.&lt;/p&gt;
+
+&lt;h3 id=&quot;add_option&quot;&gt;add_option&lt;/h3&gt;
+
+&lt;p&gt;Fires before an option is added.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('add_option', function( $option_name, $option_value ) {
+	//....
+}, 10, 2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;add_option_option&quot;&gt;add_option_{$option}&lt;/h3&gt;
+
+&lt;p&gt;Fires after a specific option has been added.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('add_option_foo', function( $option_name, $option_value ) {
+	 //....
+}, 10, 2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;added_option&quot;&gt;added_option&lt;/h3&gt;
+
+&lt;p&gt;Fires after an option has been added.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('added_option', function( $option_name, $option_value ) {
+		 //....
+}, 10, 2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;update_option&quot;&gt;update_option&lt;/h3&gt;
+
+&lt;p&gt;Fires immediately before an option value is updated.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('update_option', function( $option_name, $old_value, $new_value ) {
+	//....
+}, 10, 3);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;update_option_option&quot;&gt;update_option_{$option}&lt;/h3&gt;
+
+&lt;p&gt;FFires after the value of a specific option has been successfully updated.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('update_option_foo', function( $option_name, $old_value, $new_value ) {
+	 //....
+}, 10, 3);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;updateed_option&quot;&gt;updateed_option&lt;/h3&gt;
+
+&lt;p&gt;Fires after an option has been successfully updated.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('updated_option', function( $option_name, $old_value, $new_value ) {
+		 //....
+}, 10, 3);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;delete_option&quot;&gt;delete_option&lt;/h3&gt;
+
+&lt;p&gt;Fires immediately before an option is deleted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('delete_option', function( $option_name ) {
+		 //....
+}, 10);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;delete_optionoption&quot;&gt;delete_option{$option}&lt;/h3&gt;
+
+&lt;p&gt;Fires after a specific option has been deleted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('delete_option_foo', function( $option_name ) {
+	 //....
+}, 10);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;deleted_option&quot;&gt;deleted_option&lt;/h3&gt;
+
+&lt;p&gt;Fires after an option has been deleted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_action('deleted_option', function( $option_name ) {
+		 //....
+}, 10);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">If we need to debug add, update or delete actions on the wp_options table, we can use below hooks.</summary></entry><entry><title type="html">Get all variations of a variable product - WooCommerce</title><link href="https://sarathlal.com/get-all-variations-variable-product-woocommerce/" rel="alternate" type="text/html" title="Get all variations of a variable product - WooCommerce" /><published>2020-03-03T00:00:00+05:30</published><updated>2020-03-03T00:00:00+05:30</updated><id>https://sarathlal.com/get-all-variations-variable-product-woocommerce</id><content type="html" xml:base="https://sarathlal.com/get-all-variations-variable-product-woocommerce/">&lt;p&gt;To get all variations ID of a variable product, we can use the below code snippet.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$product = wc_get_product($product_id);
+$variations = $product-&amp;gt;get_available_variations();
+$variations_id = wp_list_pluck( $variations, 'variation_id' );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above code will provide visible variation IDs only. For example, If the price is not set for a variation, that variation will be hidden.&lt;/p&gt;
+
+&lt;p&gt;Altrenativly we can use the below code snippet to get all variations without considering visibility.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$product = wc_get_product($product_id);
+$current_products = $product-&amp;gt;get_children();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html">To get all variations ID of a variable product, we can use the below code snippet.</summary></entry><entry><title type="html">Get upcoming N days - PHP</title><link href="https://sarathlal.com/get-upcoming-n-days-php/" rel="alternate" type="text/html" title="Get upcoming N days - PHP" /><published>2020-02-19T00:00:00+05:30</published><updated>2020-02-19T00:00:00+05:30</updated><id>https://sarathlal.com/get-upcoming-n-days-php</id><content type="html" xml:base="https://sarathlal.com/get-upcoming-n-days-php/">&lt;p&gt;If you need upcoming N days in PHP, you can use the below code snippet.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function get_upcoming_n_days($days, $format = 'Y-m-d'){
+	$m = date(&quot;m&quot;); $de= date(&quot;d&quot;); $y= date(&quot;Y&quot;);
+	$dateArray = array();
+	for($i=0; $i&amp;lt;=$days-1; $i++){
+		$dateArray[] = date($format, mktime(0,0,0,$m,($de+$i),$y)); 
+	}
+	return $dateArray;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$days = get_upcoming_n_days(7);
+
+echo '&amp;lt;pre&amp;gt;';
+print_r($days);
+echo '&amp;lt;/pre&amp;gt;';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;output&quot;&gt;Output&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Array {
+	[0]=&amp;gt; 2020-02-14
+	[1]=&amp;gt; 2020-02-15
+	[2]=&amp;gt; 2020-02-16
+	[3]=&amp;gt; 2020-02-17
+	[4]=&amp;gt; 2020-02-18
+	[5]=&amp;gt; 2020-02-19
+	[6]=&amp;gt; 2020-02-20
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The default date format will be &lt;code class=&quot;highlighter-rouge&quot;&gt;Y-m-d&lt;/code&gt;. To change that format, add format in the function call as the second parameter.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$days = get_upcoming_n_days(7, 'd/m/Y');
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PHP" /><summary type="html">If you need upcoming N days in PHP, you can use the below code snippet.</summary></entry><entry><title type="html">Split time in to time slots - PHP</title><link href="https://sarathlal.com/split-time-into-time-slots-php/" rel="alternate" type="text/html" title="Split time in to time slots - PHP" /><published>2020-02-14T00:00:00+05:30</published><updated>2020-02-14T00:00:00+05:30</updated><id>https://sarathlal.com/split-time-into-time-slots-php</id><content type="html" xml:base="https://sarathlal.com/split-time-into-time-slots-php/">&lt;p&gt;If you need to split time into time slots with a proper time interval, you can use the below code snippet.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function prepare_time_slots($starttime, $endtime, $duration){
+	 
+	$time_slots = array();
+	$start_time    = strtotime($starttime); //change to strtotime
+	$end_time      = strtotime($endtime); //change to strtotime
+	 
+	$add_mins  = $duration * 60;
+	 
+	while ($start_time &amp;lt;= $end_time) // loop between time
+	{
+	   $time_slots[] = date(&quot;H:i&quot;, $start_time);
+	   $start_time += $add_mins; // to check endtime
+	}
+
+	return $time_slots;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$starttime = '9:00';  // your start time
+$endtime = '21:00';  // End time
+$duration = '30';  // split by 30 mins
+
+$time_slots = prepare_time_slots($starttime, $endtime, $duration);
+
+echo '&amp;lt;pre&amp;gt;';
+print_r($time_slots);
+echo '&amp;lt;/pre&amp;gt;';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;output&quot;&gt;Output&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Array
+(
+	[0] =&amp;gt; 09:00
+	[1] =&amp;gt; 09:30
+	[2] =&amp;gt; 10:00
+	[3] =&amp;gt; 10:30
+	[4] =&amp;gt; 11:00
+	[5] =&amp;gt; 11:30
+	[6] =&amp;gt; 12:00
+	[7] =&amp;gt; 12:30
+	[8] =&amp;gt; 13:00
+	[9] =&amp;gt; 13:30
+	[10] =&amp;gt; 14:00
+	[11] =&amp;gt; 14:30
+	[12] =&amp;gt; 15:00
+	[13] =&amp;gt; 15:30
+	[14] =&amp;gt; 16:00
+	[15] =&amp;gt; 16:30
+	[16] =&amp;gt; 17:00
+	[17] =&amp;gt; 17:30
+	[18] =&amp;gt; 18:00
+	[19] =&amp;gt; 18:30
+	[20] =&amp;gt; 19:00
+	[21] =&amp;gt; 19:30
+	[22] =&amp;gt; 20:00
+	[23] =&amp;gt; 20:30
+	[24] =&amp;gt; 21:00
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PHP" /><summary type="html">If you need to split time into time slots with a proper time interval, you can use the below code snippet.</summary></entry><entry><title type="html">Redirect single pages of post type in to post type archive page - WordPress</title><link href="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/" rel="alternate" type="text/html" title="Redirect single pages of post type in to post type archive page - WordPress" /><published>2019-08-03T00:00:00+05:30</published><updated>2019-08-03T00:00:00+05:30</updated><id>https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress</id><content type="html" xml:base="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/">&lt;p&gt;In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.&lt;/p&gt;
 
 &lt;p&gt;If we don’t need a single view of post type, it is better to make post type, not as public. In &lt;code class=&quot;highlighter-rouge&quot;&gt;register_post_type&lt;/code&gt; hook, there is an argument called &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; &amp;amp; we have to set that value as false.&lt;/p&gt;
 
@@ -157,140 +369,4 @@ function 3er45_formatted_address_replacements( $replacements, $args ){
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wp_get_attachment_image ( $attachment_id, string|array $size = 'thumbnail', false, '' );
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">If we have an image URL, we can easily make it an HTML image tag. But when we deal with WordPress, it is always better to use WordPress functions to render an image element.</summary></entry><entry><title type="html">Handle plugin activation hook in multisite &amp;amp; single site - WordPress</title><link href="https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/" rel="alternate" type="text/html" title="Handle plugin activation hook in multisite &amp; single site - WordPress" /><published>2019-03-30T00:00:00+05:30</published><updated>2019-03-30T00:00:00+05:30</updated><id>https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress</id><content type="html" xml:base="https://sarathlal.com/handle-plugin-activation-hook-multisite-single-site-wordpress/">&lt;p&gt;Do actions on plugin activation is an important task in all WordPress plugin. If we do some tweaks or save some data in the database during activation, handling plugin activation hook is too important.&lt;/p&gt;
-
-&lt;p&gt;If WordPress installation is a single site, we have to do the task in the installed WordPress itself on activation hook. For a multisite, normally we need to do the same task in all network site on activation hook.&lt;/p&gt;
-
-&lt;p&gt;Below you can find the code snippet to handle tasks in plugin activation for single site &amp;amp; multisite instance.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;register_activation_hook( __FILE__, '1345_activation_logic' );
-
-public static function 1345_activation_logic($network_active){
-	// If multisite
-	if ( function_exists( 'is_multisite' ) &amp;amp;&amp;amp; is_multisite() ) {
-			// If network activate, iterate through each site
-			if ( $network_active ) {
-					if ( false == is_super_admin() ) {
-							return;
-					}
-
-					$blogs = get_sites(); // default count is 100
-					foreach ( $blogs as $blog ) {
-						$blog_id = $blog-&amp;gt;blog_id;
-						switch_to_blog( $blog_id );
-						do_activation_hook(); // do your activation hook
-						restore_current_blog();
-					}
-			// single site activation in multisite
-			} else {
-					if ( false == current_user_can( 'activate_plugins' ) ) {
-							return;
-					}
-
-					do_activation_hook(); // do your activation hook
-			}
-	// Normal WordPress plugin activation
-	} else {
-			do_activation_hook(); // do your activation hook
-	}
-}
-
-
-// Action for creating new site in mulisite setup
-
-public static function 145561_activate_new_blog($blog_id) {
-	if (is_plugin_active_for_network(plugin_basename(__FILE__))) {
-		switch_to_blog($blog_id);
-		// do action for $blog_id
-		restore_current_blog();
-	}
-}
-add_action('wpmu_new_blog', '145561_activate_new_blog');
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Do actions on plugin activation is an important task in all WordPress plugin. If we do some tweaks or save some data in the database during activation, handling plugin activation hook is too important.</summary></entry><entry><title type="html">Get WordPress SQL query details</title><link href="https://sarathlal.com/get-wordpress-sql-query-details/" rel="alternate" type="text/html" title="Get WordPress SQL query details" /><published>2019-03-23T00:00:00+05:30</published><updated>2019-03-23T00:00:00+05:30</updated><id>https://sarathlal.com/get-wordpress-sql-query-details</id><content type="html" xml:base="https://sarathlal.com/get-wordpress-sql-query-details/">&lt;p&gt;When I debug WordPress, getting SQL query details is useful in some situations.&lt;/p&gt;
-
-&lt;p&gt;In the WordPress plugin repo, we can find some nice debug plugins to get query details. Also, we can use default WordPress options to get query details.&lt;/p&gt;
-
-&lt;p&gt;First, we need to add a definition in our &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define('SAVEQUERIES', true);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The SAVEQUERIES definition saves the database queries to an array and we can use that array to analyze those queries.&lt;/p&gt;
-
-&lt;p&gt;The array is stored in the global &lt;code class=&quot;highlighter-rouge&quot;&gt;$wpdb-&amp;gt;queries&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;print-last-sql-query-string&quot;&gt;Print last SQL query string&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_query
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;print-last-sql-query-result&quot;&gt;Print last SQL query result&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_result
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;print-last-sql-query-error&quot;&gt;Print last SQL query Error&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$wpdb-&amp;gt;last_error
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">When I debug WordPress, getting SQL query details is useful in some situations.</summary></entry><entry><title type="html">Remove edit, view, trash and quick edit links within posts list of admin screen - WordPress</title><link href="https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress/" rel="alternate" type="text/html" title="Remove edit, view, trash and quick edit links within posts list of admin screen - WordPress" /><published>2018-09-05T00:00:00+05:30</published><updated>2018-09-05T00:00:00+05:30</updated><id>https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress</id><content type="html" xml:base="https://sarathlal.com/remove-edit-view-trash-quick-edit-links-posts-list-admin-screen-wordpress/">&lt;p&gt;&lt;img src=&quot;/images/2018/edit-view-trash-quick-edit-links-posts-wordpress.png&quot; alt=&quot;Remove edit, view, trash and quick edit links - WordPress&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Use below code snippet to remove the edit, view, trash and quick edit links that we seen when we mouse over a post in the post list in admin screens.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'post_row_actions', 'remove_row_actions', 10, 1 );
-
-function remove_row_actions( $actions ){
-	// Confirm post type
-	if( get_post_type() === 'post' ){
-		unset( $actions['edit'] );
-		unset( $actions['view'] );
-		unset( $actions['trash'] );
-		unset( $actions['inline hide-if-no-js'] );
-	}    
-	return $actions;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">PHP Errors not displaying or not logging - LAMP server - Solved</title><link href="https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux/" rel="alternate" type="text/html" title="PHP Errors not displaying or not logging - LAMP server - Solved" /><published>2018-09-04T00:00:00+05:30</published><updated>2018-09-04T00:00:00+05:30</updated><id>https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux</id><content type="html" xml:base="https://sarathlal.com/php-errors-not-displaying-not-logging-lamp-server-mint-linux/">&lt;p&gt;I have to set up a new LAMP server in Linux &lt;code class=&quot;highlighter-rouge&quot;&gt;Mint 19&lt;/code&gt; on yesterday for WP development.&lt;/p&gt;
-
-&lt;p&gt;The configurations are,&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Apache&lt;/li&gt;
-  &lt;li&gt;PHP 7&lt;/li&gt;
-  &lt;li&gt;MySQL 5&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Later half an hour, I realize that PHP errors are not displaying or not logging.&lt;/p&gt;
-
-&lt;p&gt;The issue is due to configuration in PHP configuration file.&lt;/p&gt;
-
-&lt;p&gt;Solved it by updating 2 &lt;code class=&quot;highlighter-rouge&quot;&gt;php.ini&lt;/code&gt; files. The files location are given below. May the file path will different as per our OS, Apache &amp;amp; PHP version.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/php/7.2/apache2/php.ini 
-/etc/php/7.2/cli/php.ini 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The configurations are given below. We need to find out the line of configuration and update the values. There is chance for multiple lines for same configuration.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;display_errors = On
-track_errors = On
-log_errors = On
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Then need to restart Apache.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If still facing issue on error reporting, restart the server.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;reboot
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="LAMP Server" /><summary type="html">I have to set up a new LAMP server in Linux Mint 19 on yesterday for WP development.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">If we have an image URL, we can easily make it an HTML image tag. But when we deal with WordPress, it is always better to use WordPress functions to render an image element.</summary></entry></feed>
