@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2020-03-07T19:57:38+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://sarathlal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sarathlal.com/" rel="alternate" type="text/html" /><updated>2020-03-07T23:59:36+05:30</updated><id>https://sarathlal.com/</id><title type="html">Sarathlal N</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">Action hooks that trigger on, before or after add, update or delete actions of option - WordPress</title><link href="https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress/" rel="alternate" type="text/html" title="Action hooks that trigger on, before or after add, update or delete actions of option - WordPress" /><published>2020-03-07T00:00:00+05:30</published><updated>2020-03-07T00:00:00+05:30</updated><id>https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress</id><content type="html" xml:base="https://sarathlal.com/action-hooks-trigger-on-before-after-add-update-delete-actions-option-wordpress/">&lt;p&gt;If we need to debug add, update or delete actions on the &lt;code class=&quot;highlighter-rouge&quot;&gt;wp_options&lt;/code&gt; table, we can use below hooks.&lt;/p&gt;
 
 &lt;h3 id=&quot;add_option&quot;&gt;add_option&lt;/h3&gt;
@@ -104,7 +104,29 @@ $variations_id = wp_list_pluck( $variations, 'variation_id' );
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$product = wc_get_product($product_id);
 $current_products = $product-&amp;gt;get_children();
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html">To get all variations ID of a variable product, we can use the below code snippet.</summary></entry><entry><title type="html">Get upcoming N days - PHP</title><link href="https://sarathlal.com/get-upcoming-n-days-php/" rel="alternate" type="text/html" title="Get upcoming N days - PHP" /><published>2020-02-19T00:00:00+05:30</published><updated>2020-02-19T00:00:00+05:30</updated><id>https://sarathlal.com/get-upcoming-n-days-php</id><content type="html" xml:base="https://sarathlal.com/get-upcoming-n-days-php/">&lt;p&gt;If you need upcoming N days in PHP, you can use the below code snippet.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html">To get all variations ID of a variable product, we can use the below code snippet.</summary></entry><entry><title type="html">Generate random string - Python</title><link href="https://sarathlal.com/generate-random-string-python/" rel="alternate" type="text/html" title="Generate random string - Python" /><published>2020-02-28T00:00:00+05:30</published><updated>2020-02-28T00:00:00+05:30</updated><id>https://sarathlal.com/generate-random-string-python</id><content type="html" xml:base="https://sarathlal.com/generate-random-string-python/">&lt;p&gt;Getting a random string is almost required in application development. To get a random string using Python, we can use the below function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import secrets 
+import string
+
+def generate_random_string(length = 6):
+	alphabet = string.ascii_uppercase + string.digits
+	random_string = ''.join(secrets.choice(alphabet) for i in range(length))
+	return random_string
+
+my_string = generate_random_string(8)
+print(my_string)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Output&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;QEFBG0G1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Python" /><summary type="html">Getting a random string is almost required in application development. To get a random string using Python, we can use the below function.</summary></entry><entry><title type="html">Split domain from an email address - Python</title><link href="https://sarathlal.com/split-domain-email-address-python/" rel="alternate" type="text/html" title="Split domain from an email address - Python" /><published>2020-02-24T00:00:00+05:30</published><updated>2020-02-24T00:00:00+05:30</updated><id>https://sarathlal.com/split-domain-email-address-python</id><content type="html" xml:base="https://sarathlal.com/split-domain-email-address-python/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;email = 'user@example.com'
+domain = email.split('@')[1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Python" /><summary type="html">email = 'user@example.com' domain = email.split('@')[1]</summary></entry><entry><title type="html">Get upcoming N days - PHP</title><link href="https://sarathlal.com/get-upcoming-n-days-php/" rel="alternate" type="text/html" title="Get upcoming N days - PHP" /><published>2020-02-19T00:00:00+05:30</published><updated>2020-02-19T00:00:00+05:30</updated><id>https://sarathlal.com/get-upcoming-n-days-php</id><content type="html" xml:base="https://sarathlal.com/get-upcoming-n-days-php/">&lt;p&gt;If you need upcoming N days in PHP, you can use the below code snippet.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function get_upcoming_n_days($days, $format = 'Y-m-d'){
 	$m = date(&quot;m&quot;); $de= date(&quot;d&quot;); $y= date(&quot;Y&quot;);
@@ -211,7 +233,90 @@ echo '&amp;lt;/pre&amp;gt;';
 	[24] =&amp;gt; 21:00
 )
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="PHP" /><summary type="html">If you need to split time into time slots with a proper time interval, you can use the below code snippet.</summary></entry><entry><title type="html">Redirect single pages of post type in to post type archive page - WordPress</title><link href="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/" rel="alternate" type="text/html" title="Redirect single pages of post type in to post type archive page - WordPress" /><published>2019-08-03T00:00:00+05:30</published><updated>2019-08-03T00:00:00+05:30</updated><id>https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress</id><content type="html" xml:base="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/">&lt;p&gt;In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PHP" /><summary type="html">If you need to split time into time slots with a proper time interval, you can use the below code snippet.</summary></entry><entry><title type="html">Add / change default user password in PostgreSQL</title><link href="https://sarathlal.com/add-change-default-user-password-postgresql/" rel="alternate" type="text/html" title="Add / change default user password in PostgreSQL" /><published>2020-02-11T00:00:00+05:30</published><updated>2020-02-11T00:00:00+05:30</updated><id>https://sarathlal.com/add-change-default-user-password-postgresql</id><content type="html" xml:base="https://sarathlal.com/add-change-default-user-password-postgresql/">&lt;p&gt;In most Unix distributions, the default Postgres user neither requires nor uses a password for authentication. But if you like to set a password for the user, you can follow the below steps.&lt;/p&gt;
+
+&lt;h2 id=&quot;login-to-cli-as-the-default-user&quot;&gt;Login to CLI as the default user&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u postgres psql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;change-password&quot;&gt;Change password&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ALTER USER postgres PASSWORD 'myPassword';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PostgreSQL" /><summary type="html">In most Unix distributions, the default Postgres user neither requires nor uses a password for authentication. But if you like to set a password for the user, you can follow the below steps.</summary></entry><entry><title type="html">Install PostgreSQL 11 on Debian 10 (Buster)</title><link href="https://sarathlal.com/install-postgresql-11-debian-10-buster/" rel="alternate" type="text/html" title="Install PostgreSQL 11 on Debian 10 (Buster)" /><published>2020-02-07T00:00:00+05:30</published><updated>2020-02-07T00:00:00+05:30</updated><id>https://sarathlal.com/install-postgresql-11-debian-10-buster</id><content type="html" xml:base="https://sarathlal.com/install-postgresql-11-debian-10-buster/">&lt;h2 id=&quot;setup-postgresql-ppa&quot;&gt;Setup PostgreSQL PPA&lt;/h2&gt;
+
+&lt;p&gt;First, import PostgreSQL packages signing key on our system.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now add PostgreSQL apt repository.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo sh -c 'echo &quot;deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main&quot; &amp;gt;&amp;gt; /etc/apt/sources.list.d/pgdg.list'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;install-postgresql&quot;&gt;Install PostgreSQL&lt;/h2&gt;
+
+&lt;p&gt;Update the repository list &amp;amp; install PostgreSQL.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;turn-on-postgresql-server&quot;&gt;Turn on PostgreSQL server&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl start postgresql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;login-to-postgresql-cli-as-user-postgres&quot;&gt;Login to PostgreSQL CLI as user postgres&lt;/h2&gt;
+
+&lt;p&gt;After installing the PostgreSQL database server by default, it creates a user ‘postgres’ with the role ‘postgres’. It also creates a system account with the same name ‘postgres’.&lt;/p&gt;
+
+&lt;p&gt;So now login to our system as user postgres and connect the database.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u postgres psql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To exit from PostgreSQL database CLI interface, use the below command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\q
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PostgreSQL" /><category term="Debian 10" /><summary type="html">Setup PostgreSQL PPA</summary></entry><entry><title type="html">Create database, user &amp;amp; allow access - PostgreSQL</title><link href="https://sarathlal.com/create-database-user-allow-access-postgresql/" rel="alternate" type="text/html" title="Create database, user &amp; allow access - PostgreSQL" /><published>2020-02-02T00:00:00+05:30</published><updated>2020-02-02T00:00:00+05:30</updated><id>https://sarathlal.com/create-database-user-allow-access-postgresql</id><content type="html" xml:base="https://sarathlal.com/create-database-user-allow-access-postgresql/">&lt;h2 id=&quot;creating-user&quot;&gt;Creating user&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u postgres createuser &amp;lt;username&amp;gt;	 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-database&quot;&gt;Creating Database&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u postgres createdb &amp;lt;dbname&amp;gt;	 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;access-postgresql-command-line-interface&quot;&gt;Access PostgreSQL command-line interface&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u postgres psql	 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;giving-the-user-a-password&quot;&gt;Giving the user a password&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alter user &amp;lt;username&amp;gt; with encrypted password '&amp;lt;password&amp;gt;';	 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;granting-privileges-on-database&quot;&gt;Granting privileges on database&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;psql=# grant all privileges on database &amp;lt;dbname&amp;gt; to &amp;lt;username&amp;gt;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="PostgreSQL" /><summary type="html">Creating user</summary></entry><entry><title type="html">Redirect single pages of post type in to post type archive page - WordPress</title><link href="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/" rel="alternate" type="text/html" title="Redirect single pages of post type in to post type archive page - WordPress" /><published>2019-08-03T00:00:00+05:30</published><updated>2019-08-03T00:00:00+05:30</updated><id>https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress</id><content type="html" xml:base="https://sarathlal.com/redirect-single-pages-to-post-type-archive-page-wordpress/">&lt;p&gt;In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.&lt;/p&gt;
 
 &lt;p&gt;If we don’t need a single view of post type, it is better to make post type, not as public. In &lt;code class=&quot;highlighter-rouge&quot;&gt;register_post_type&lt;/code&gt; hook, there is an argument called &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; &amp;amp; we have to set that value as false.&lt;/p&gt;
 
@@ -227,146 +332,4 @@ echo '&amp;lt;/pre&amp;gt;';
 	}
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.</summary></entry><entry><title type="html">Get details about available image sizes - WordPress</title><link href="https://sarathlal.com/get-details-available-image-sizes-wordpress/" rel="alternate" type="text/html" title="Get details about available image sizes - WordPress" /><published>2019-08-02T00:00:00+05:30</published><updated>2019-08-02T00:00:00+05:30</updated><id>https://sarathlal.com/get-details-available-image-sizes-wordpress</id><content type="html" xml:base="https://sarathlal.com/get-details-available-image-sizes-wordpress/">&lt;p&gt;Recently, when I develop a WordPress theme, I need details about all available image sizes for the theme customizer module. I need details about custom image sizes added by other plugins (Eg. WooCommerce etc) &amp;amp; default WordPress image sizes.&lt;/p&gt;
-
-&lt;p&gt;The WordPress core doesn’t have a native method for getting all the details. So I used the below function.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
- * Get all the registered image sizes along with their dimensions
- *
- * @global array $_wp_additional_image_sizes
- *
- * @link http://core.trac.wordpress.org/ticket/18947 Reference ticket
- *
- * @return array $image_sizes The image sizes
- */
-function _get_all_image_sizes() {
-	global $_wp_additional_image_sizes;
-
-	$default_image_sizes = get_intermediate_image_sizes();
-
-	foreach ( $default_image_sizes as $size ) {
-		$image_sizes[ $size ][ 'width' ] = intval( get_option( &quot;{$size}_size_w&quot; ) );
-		$image_sizes[ $size ][ 'height' ] = intval( get_option( &quot;{$size}_size_h&quot; ) );
-		$image_sizes[ $size ][ 'crop' ] = get_option( &quot;{$size}_crop&quot; ) ? get_option( &quot;{$size}_crop&quot; ) : false;
-	}
-
-	if ( isset( $_wp_additional_image_sizes ) &amp;amp;&amp;amp; count( $_wp_additional_image_sizes ) ) {
-		$image_sizes = array_merge( $image_sizes, $_wp_additional_image_sizes );
-	}
-
-	return $image_sizes;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The output will be an array like below one.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Array
-(
-	[thumbnail] =&amp;gt; Array
-		(
-			[width] =&amp;gt; 150
-			[height] =&amp;gt; 150
-			[crop] =&amp;gt; 1
-		)
-
-	[medium] =&amp;gt; Array
-		(
-			[width] =&amp;gt; 300
-			[height] =&amp;gt; 300
-			[crop] =&amp;gt; 
-		)
-
-	[medium_large] =&amp;gt; Array
-		(
-			[width] =&amp;gt; 768
-			[height] =&amp;gt; 0
-			[crop] =&amp;gt; 
-		)
-
-	[large] =&amp;gt; Array
-		(
-			[width] =&amp;gt; 1024
-			[height] =&amp;gt; 1024
-			[crop] =&amp;gt; 
-		)
-
-)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">Recently, when I develop a WordPress theme, I need details about all available image sizes for the theme customizer module. I need details about custom image sizes added by other plugins (Eg. WooCommerce etc) &amp;amp; default WordPress image sizes.</summary></entry><entry><title type="html">Change shipping and billing address title - WooCommerce</title><link href="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/" rel="alternate" type="text/html" title="Change shipping and billing address title - WooCommerce" /><published>2019-07-31T00:00:00+05:30</published><updated>2019-07-31T00:00:00+05:30</updated><id>https://sarathlal.com/change-shipping-billing-address-title-woocommerce</id><content type="html" xml:base="https://sarathlal.com/change-shipping-billing-address-title-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/change-billing-shipping-address-title-woocommerce.gif&quot; alt=&quot;Change shipping and billing address title - WooCommerce&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you like to modify the title of the addresses on the “My Account” page for WooCommerce.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'woocommerce_my_account_get_addresses', 'er45d_woo_change_title_account' );
-function er45d_woo_change_title_account( $account_title ) {
-	$account_title = array(
-		'billing' =&amp;gt; __( 'New Billing Address', 'text-domain' ),
-		'shipping' =&amp;gt; __( 'New Shipping Address', 'text-domain' ),
-	);
-	
-	return $account_title;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">Add phone number to the output of the addresses on the “My Account” page - WooCommerce</title><link href="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/" rel="alternate" type="text/html" title="Add phone number to the output of the addresses on the &quot;My Account&quot; page - WooCommerce" /><published>2019-07-30T00:00:00+05:30</published><updated>2019-07-30T00:00:00+05:30</updated><id>https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/add-phone-number-output-addresses-my-account-page-woocommerce/">&lt;p&gt;&lt;img src=&quot;/images/2019/7/add-phone-number-output-addresses-my-account-page-woocommerce.gif&quot; alt=&quot;Add phone number to the output of the addresses on the &amp;quot;My Account&amp;quot; page - WooCommerce&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We need to add 3 filters to modify the output of the addresses on the “My Account” page/shortcode for WooCommerce.&lt;/p&gt;
-
-&lt;p&gt;First, we will need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_my_account_my_address_formatted_address&lt;/code&gt; to populate any new values we want to add.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_filter( 'woocommerce_my_account_my_address_formatted_address', 'er34d_formatted_address',10, 3 );
-
-function er34d_formatted_address( $args, $customer_id, $name ){
-	// the phone is saved as billing_phone and shipping_phone
-	$args['phone'] = get_user_meta( $customer_id, $name . '_phone', true );
-	return $args;
-} 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Next use &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_localisation_address_formats&lt;/code&gt; to modify the formatting of the address. We have do this as per country locale. But now I ignore that condition.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// modify the address formats
-add_filter( 'woocommerce_localisation_address_formats', '3e45_localisation_address_formats');
-
-function 3e45_localisation_address_formats( $formats ){
-	foreach ( $formats as $key =&amp;gt; &amp;amp;$format ) {
-		// put a break and then the phone after each format.
-		$format .= &quot;\n{phone}&quot;;
-	}
-	return $formats;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Last, we need to update &lt;code class=&quot;highlighter-rouge&quot;&gt;woocommerce_formatted_address_replacements&lt;/code&gt; to have WooCommerce replace your replacement string with the actual data.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// add the replacement value
-add_filter( 'woocommerce_formatted_address_replacements', '3er45_formatted_address_replacements', 10, 2 );
-
-function 3er45_formatted_address_replacements( $replacements, $args ){
-	// we want to replace {phone} in the format with the data we populated
-	$replacements['{phone}'] = $args['phone'];
-	return $replacements;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WooCommerce" /><category term="WordPress" /><summary type="html"></summary></entry><entry><title type="html">Conditional tags for order thank you page - WooCommerce</title><link href="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/" rel="alternate" type="text/html" title="Conditional tags for order thank you page - WooCommerce" /><published>2019-07-28T00:00:00+05:30</published><updated>2019-07-28T00:00:00+05:30</updated><id>https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce</id><content type="html" xml:base="https://sarathlal.com/conditional-tag-order-thank-you-page-woocommerce/">&lt;p&gt;In WooCommerce, if you need to check that current page is an order thank you page, you can  use below conditional tags in your code.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_order_received_page()&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is_wc_endpoint_url( 'order-received' )&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="WooCommerce" /><summary type="html">In WooCommerce, if you need to check that current page is an order thank you page, you can use below conditional tags in your code.</summary></entry><entry><title type="html">Get WordPress image element from attachment URL - WordPress</title><link href="https://sarathlal.com/get-wordpress-image-element-from-attachment-url/" rel="alternate" type="text/html" title="Get WordPress image element from attachment URL - WordPress" /><published>2019-07-25T00:00:00+05:30</published><updated>2019-07-25T00:00:00+05:30</updated><id>https://sarathlal.com/get-wordpress-image-element-from-attachment-url</id><content type="html" xml:base="https://sarathlal.com/get-wordpress-image-element-from-attachment-url/">&lt;p&gt;If we have an image URL, we can easily make it an HTML image tag. But when we deal with WordPress, it is always better to use WordPress functions to render an image element.&lt;/p&gt;
-
-&lt;p&gt;So now consider that we have an image URL.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1---get-attachment-id-from-image-url&quot;&gt;Step 1 - Get attachment ID from image URL&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$attachment_id = attachment_url_to_postid( 'http://example.com/wp-content/uploads/2019/05/castle-old.jpg' );
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;step-2---get-image-html-tag-from-attachment-id&quot;&gt;Step 2 - Get image HTML tag from attachment ID&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wp_get_attachment_image ( $attachment_id, string|array $size = 'thumbnail', false, '' );
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">If we have an image URL, we can easily make it an HTML image tag. But when we deal with WordPress, it is always better to use WordPress functions to render an image element.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="WordPress" /><summary type="html">In WordPress, if our post type is public, in default, a single page view will be available for all posts in that post type.</summary></entry></feed>

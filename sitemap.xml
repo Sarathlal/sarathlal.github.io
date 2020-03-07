@@ -33,6 +33,36 @@
   
     
     <url>
+      <loc>https://sarathlal.com/generate-random-string-python/</loc>
+      
+        <lastmod>2020-02-28T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://sarathlal.com/split-domain-email-address-python/</loc>
+      
+        <lastmod>2020-02-24T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>https://sarathlal.com/get-upcoming-n-days-php/</loc>
       
         <lastmod>2020-02-19T00:00:00+05:30</lastmod>
@@ -51,6 +81,51 @@
       <loc>https://sarathlal.com/split-time-into-time-slots-php/</loc>
       
         <lastmod>2020-02-14T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://sarathlal.com/add-change-default-user-password-postgresql/</loc>
+      
+        <lastmod>2020-02-11T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://sarathlal.com/install-postgresql-11-debian-10-buster/</loc>
+      
+        <lastmod>2020-02-07T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://sarathlal.com/create-database-user-allow-access-postgresql/</loc>
+      
+        <lastmod>2020-02-02T00:00:00+05:30</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -4641,7 +4716,7 @@
     <url>
       <loc>https://sarathlal.com/404.html</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4656,7 +4731,7 @@
     <url>
       <loc>https://sarathlal.com/about/</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4671,7 +4746,7 @@
     <url>
       <loc>https://sarathlal.com/archive/</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -4686,7 +4761,7 @@
     <url>
       <loc>https://sarathlal.com/contact/</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -4701,7 +4776,7 @@
     <url>
       <loc>https://sarathlal.com/</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -4718,7 +4793,7 @@
     <url>
       <loc>https://sarathlal.com/feed.xml</loc>
       
-        <lastmod>2020-03-07T19:57:38+05:30</lastmod>
+        <lastmod>2020-03-07T23:59:36+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
